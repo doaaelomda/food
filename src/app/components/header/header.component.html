@@ -1,0 +1,24 @@
+<header>
+  <div class="container">
+    <a href="#" routerLink="/" class="logo">TC ☺ Food Corner!</a>
+    <nav>
+      <ul>
+        <li *ngIf="!authService.isLoggedIn">
+          <a routerLink="/login" routerLinkActive="active">
+            Login
+          </a>
+        </li>
+        <li class="menu-container" *ngIf="authService.isLoggedIn && isHome">
+          <a routerLink="/dashboard">Testy Codeiz</a>
+          <div class="menu">
+            <a routerLink="/profile">Profile</a>
+            <a (click)="logout()">Logout</a>
+          </div>
+          <a routerLink="/cart" routerLinkActive="active">
+            Cart <span>{{cartQuantity}}</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
