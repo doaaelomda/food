@@ -19,7 +19,7 @@ export class FoodService {
         origins: ['italy'],
         favourite: true,
         star: 3,
-        imgUrl: 'tree/main/src/assets/food-1.jpg',
+        imgUrl: 'blob/main/src/assets/food-1.jpg',
         tags: [ 'Lunch','Pizza'],
       },
       {
@@ -30,7 +30,7 @@ export class FoodService {
         origins: ['egyption'],
         favourite: false,
         star: 2,
-        imgUrl: 'tree/main/src/assets/food-2.jpg',
+        imgUrl: 'blob/main/src/assets/food-2.jpg',
         tags: ['FastFood', 'Lunch'],
       },
       {
@@ -41,7 +41,7 @@ export class FoodService {
         origins: ['saud-arabya'],
         favourite: false,
         star:1,
-        imgUrl: 'tree/main/src/assets/food-3.jpg',
+        imgUrl: 'blob/main/src/assets/food-3.jpg',
         tags: ['FastFood','Burger'],
       },
       {
@@ -52,7 +52,7 @@ export class FoodService {
         origins: ['Fransh'],
         favourite: false,
         star: 2,
-        imgUrl: 'tree/main/src/assets/food-4.jpg',
+        imgUrl: 'blob/main/src/assets/food-4.jpg',
         tags: [ 'Fry'],
       },
       {
@@ -63,7 +63,7 @@ export class FoodService {
         origins: ['marco'],
         favourite: false,
         star: 4,
-        imgUrl: 'tree/main/src/assets/food-5.jpg',
+        imgUrl: 'blob/main/src/assets/food-5.jpg',
         tags: ['Soup'],
       },
       {
@@ -74,7 +74,7 @@ export class FoodService {
         origins: ['italy'],
         favourite: true,
         star: 5,
-        imgUrl: 'tree/main/src/assets/food-6.jpg',
+        imgUrl: 'blob/main/src/assets/food-6.jpg',
         tags: ['FastFood','Pizza'],
       },
       {
@@ -85,7 +85,7 @@ export class FoodService {
         origins: ['Espanish'],
         favourite: false,
         star: 3,
-        imgUrl: 'tree/main/src/assets/food-7.jpg',
+        imgUrl: 'blob/main/src/assets/food-7.jpg',
         tags: ['Burger', 'Lunch'],
       },
       {
@@ -96,7 +96,7 @@ export class FoodService {
         origins: ['egyption'],
         favourite: true,
         star: 4,
-        imgUrl: 'tree/main/src/assets/food-8.jpg',
+        imgUrl: 'blob/main/src/assets/food-8.jpg',
         tags: ['FastFood', 'Pizza'],
       },
     ];
