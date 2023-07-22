@@ -1,10 +1,9 @@
-<app-notfound 
-[visible]="!cart || cart.items.length<=0 "
+<app-not-found
+  [visible]="!cart || !cart.items"
   notFoundMessage="Cart Page Is Empty!"
-  resetLinkText="Go To Homepage"
->
-</app-notfound>
-<div *ngIf="cart && cart.items.length > 0" class="container">
+  resetLinkText="Go To Homepage">
+</app-not-found>
+<div *ngIf="cart && cart.items" class="container">
 <ul>
   <li *ngFor="let cartItem of cart.items">
     <div>
@@ -29,7 +28,6 @@
     <div>
       {{cartItem.food.price * cartItem.quantity |currency}}
     </div>
-
     <div>
       <button class="remove-button" (click)="removeFromCart(cartItem)">
         Remove
@@ -40,9 +38,9 @@
 <div class="checkout">
   <div>
     <div class="foods-count">{{cart.totalCount}}</div>
-    <div class="total-price">{{cart.totalPrice|currency}}</div>
+    <div class="total-price">{{cart.TotalPrice}}</div>
   </div>
+  <a (click)="done()">Proceed to Checkout</a>
+</div>
+</div>
 
-  <a routerLink="/checkout">Proceed to Checkout</a>
-</div>
-</div>

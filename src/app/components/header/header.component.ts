@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { CartService } from 'src/app/services/cart.service';
-import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -14,18 +13,12 @@ export class HeaderComponent {
   isLoggedIn: boolean=false;
   isLogin:boolean = false;
   
-  constructor(cartService:CartService, public authService: AuthService, public router:Router) {
+  constructor(cartService:CartService, public router:Router) {
     cartService.getCartObservable().subscribe((newCart:any) => {
       this.cartQuantity = newCart.totalCount;
       this.isHome = this.router.url === '/';
       this.isLoggedIn = false;
     })
   }
-
-  logout() {
-    this.authService.setIsLoggedIn(false); // تعيين قيمة isLoggedIn إلى false بمجرد تسجيل الخروج بنجاح
-    this.router.navigateByUrl('/'); // تحويل المستخدم إلى الصفحة الرئيسية بعد تسجيل الخروج
-  }
-
   ngOnInit(): void {}
 }

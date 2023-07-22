@@ -1,15 +1,23 @@
-import { CartItem } from './cartitem';
+import { CartItem } from "./cartitem";
 
-export class Cart{
-  items:CartItem[] = [];
-  
-  get totalPrice(){
-    let totalPrice= 0;
-    this.items.forEach(item=>{
-      totalPrice += item.price.valueOf();
-    })
-    return totalPrice
+export class Cart {
+  items: CartItem[] = [];
+  totalPrice: number = 0;
+  totalCount: number = 0;
 
+  get TotalPrice(): number {
+    let totalPrice: number = 0;
+    this.items.forEach((item: CartItem) => {
+      totalPrice += item.totalPrice;
+    });
+    return totalPrice;
   }
-  totalCount:number = 0;
+
+  get TotalCount(): number {
+    let totalCount: number = 0;
+    this.items.forEach((item: CartItem) => {
+      totalCount += item.quantity;
+    });
+    return totalCount;
+  }
 }

@@ -1,8 +1,8 @@
-<app-notfound 
-[visible]="!food"
-notFoundMessage="Producat Not Found"
-resetLinkText="Go To Home">
- </app-notfound>
+<app-not-found
+  [visible]="!food.id"
+  notFoundMessage="Food Not Found"
+  resetLinkText="Back To Homepage">
+</app-not-found>
 <div *ngIf="food.id" class="container">
   <img [src]="food.imgUrl" [alt]="food.name"/>
   <div class="details">
@@ -40,6 +40,6 @@ resetLinkText="Go To Home">
         {{food.price | currency}}
       </span>
     </div>
-    <button routerLink="cart" (click)="addtocart()">Add To Cart</button>
+    <button  (click)="addtocart()">Add To Cart</button>
   </div>
 </div>

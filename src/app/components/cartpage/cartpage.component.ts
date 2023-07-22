@@ -1,3 +1,4 @@
+import { Cart } from 'src/app/shared/models/cart';
 import { CartService } from './../../services/cart.service';
 import { FoodService } from './../../services/food/food.service';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -26,7 +27,8 @@ export class CartpageComponent {
   addtocart(){
     this.cartService.addToCart(this.food);
     localStorage.setItem('cart', JSON.stringify(this.cartService.getCart()));
-    this.router.navigate(['/cart']);
+    this.router.navigate(["/cart" ])
   }
+  
   
 }
